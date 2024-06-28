@@ -26,9 +26,9 @@ const SignupForm = () => {
   });
 
   return (
-    <div className="max-w-6xl mx-auto p-8 bg-blue-100 rounded-lg shadow-md">
+    <div className="max-w-6xl p-8">
       <form onSubmit={formik.handleSubmit}>
-        <label htmlFor="firstName" className="block text-lg font-bold text-blue-800 mb-2">First Name</label>
+        <label htmlFor="firstName" className="block text-lg font-bold ">First Name</label>
         <input
           id="firstName"
           name="firstName"
@@ -36,13 +36,13 @@ const SignupForm = () => {
           onChange={formik.handleChange}
           onBlur={formik.handleBlur}
           value={formik.values.firstName}
-          className="block w-full px-4 py-2 bg-blue-200 text-gray-800 focus:ring-blue-400"
+          className="block px-4  text-gray-800 "
           placeholder="Enter your first name"
         />
         {formik.touched.firstName && formik.errors.firstName ? (
           <div className="text-red-600 mt-1">{formik.errors.firstName}</div>
         ) : null}
-        <label htmlFor="lastName" className="block mt-4 text-lg font-bold text-blue-800 mb-2">Last Name</label>
+        <label htmlFor="lastName" className="block text-lg font-bold ">Last Name</label>
         <input
           id="lastName"
           name="lastName"
@@ -50,13 +50,13 @@ const SignupForm = () => {
           onChange={formik.handleChange}
           onBlur={formik.handleBlur}
           value={formik.values.lastName}
-          className="block w-full px-4 py-2 bg-blue-200 text-gray-800 focus:ring-blue-400"
+          className="block px-4  text-gray-800"
           placeholder="Enter your last name"
         />
         {formik.touched.lastName && formik.errors.lastName ? (
           <div className="text-red-600 mt-1">{formik.errors.lastName}</div>
         ) : null}
-        <label htmlFor="email" className="block mt-4 text-lg font-bold text-blue-800 mb-2">Email Address</label>
+        <label htmlFor="email" className="block text-lg font-bold">Email Address</label>
         <input
           id="email"
           name="email"
@@ -64,7 +64,7 @@ const SignupForm = () => {
           onChange={formik.handleChange}
           onBlur={formik.handleBlur}
           value={formik.values.email}
-          className="block w-full px-4 py-2 bg-blue-200 text-gray-800  focus:ring-blue-400"
+          className="block px-4  text-gray-800"
           placeholder="Enter your email address"
         />
         {formik.touched.email && formik.errors.email ? (
@@ -72,7 +72,7 @@ const SignupForm = () => {
         ) : null}
         <button
           type="submit"
-          className="mt-6 px-4 py-2 bg-blue-500 text-white hover:bg-blue-600 focus:ring-blue-400"
+          className="mt-6 px-4  bg-slate-950 text-white"
         >
           Submit
         </button>

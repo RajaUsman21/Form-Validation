@@ -22,9 +22,9 @@ const LoginForm = () => {
   });
 
   return (
-    <div className="max-w-6xl mx-auto p-8 bg-blue-100 rounded-lg shadow-md">
+    <div className="max-w-6xl  p-8">
       <form onSubmit={formik.handleSubmit}>
-        <label htmlFor="email" className="block text-lg font-bold text-blue-800 mb-2">Email Address</label>
+        <label htmlFor="email" className=" text-lg font-bold">Email Address</label>
         <input
           id="email"
           name="email"
@@ -32,13 +32,13 @@ const LoginForm = () => {
           onChange={formik.handleChange}
           onBlur={formik.handleBlur}
           value={formik.values.email}
-          className="block w-full px-4 py-2 bg-blue-200 text-gray-800 focus:ring-blue-400"
+          className="block  text-gray-800"
           placeholder="Enter your email address"
         />
         {formik.touched.email && formik.errors.email ? (
           <div className="text-red-600 mt-1">{formik.errors.email}</div>
         ) : null}
-        <label htmlFor="password" className="block mt-4 text-lg font-bold text-blue-800 mb-2">Password</label>
+        <label htmlFor="password" className=" mt-4 text-lg font-bold ">Password</label>
         <input
           id="password"
           name="password"
@@ -46,7 +46,7 @@ const LoginForm = () => {
           onChange={formik.handleChange}
           onBlur={formik.handleBlur}
           value={formik.values.password}
-          className="block w-full px-4 py-2 bg-blue-200 text-gray-800 focus:ring-blue-400"
+          className="block text-gray-800"
           placeholder="Enter your password"
         />
         {formik.touched.password && formik.errors.password ? (
@@ -54,7 +54,7 @@ const LoginForm = () => {
         ) : null}
         <button
           type="submit"
-          className="mt-6 px-4 py-2 bg-blue-500 text-white  hover:bg-blue-600  focus:ring-blue-400"
+          className=" bg-slate-950 text-white  "
         >
           Login
         </button>

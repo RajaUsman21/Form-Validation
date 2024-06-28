@@ -84,7 +84,8 @@
 import { Route, Routes } from 'react-router-dom';
 import SignupForm from './pages/signup';
 import LoginForm from './pages/login';
-import Home from './pages/home'; // Create a home component if it doesn't exist
+import Home from './pages/home';
+import Products from './pages/products';
 
 function App() {
   return (
@@ -92,6 +93,7 @@ function App() {
       <Route path="/" element={<Home />} />
       <Route path="/signup" element={<SignupForm />} />
       <Route path="/login" element={<LoginForm />} />
+      <Route path="/products" element={<Products/>}/>
     </Routes>
   );
 }
